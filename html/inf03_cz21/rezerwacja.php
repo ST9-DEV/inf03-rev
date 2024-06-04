@@ -22,7 +22,7 @@ if (!$con) {
 $data=$_POST['data'];
 $osoby=$_POST['os'];
 $telefon=$_POST['tel'];
-$sql="INSERT INTO `rezerwacje`(`id`, nr_stolika, `data_rez`, `liczba_osob`, `telefon`) VALUES ('', '', '$data','$osoby','$telefon')";
+$sql="INSERT INTO `rezerwacje`(`id`, nr_stolika, `data_rez`, `liczba_osob`, `telefon`) VALUES ('', NULL, '$data','$osoby','$telefon')";
 if (mysqli_query($con, $sql)) {
     echo "Dodano rezerwację do bazy";
 } else {
