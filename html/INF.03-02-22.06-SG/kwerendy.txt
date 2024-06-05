@@ -1,0 +1,9 @@
+SELECT marka, rocznik FROM `samochody` WHERE kolor LIKE 'niebieski';
+
+SELECT COUNT(*) FROM `samochody` WHERE stan LIKE 'bardzo dobry' AND marka='Toyota' OR marka='Opel';
+
+UPDATE `samochody` SET stan='dobry' WHERE rocznik < 2004;
+
+CREATE USER "jan"@"localhost" IDENTIFIED BY "janKowalski1@";
+
+GRANT SELECT, INSERT, UPDATE ON samochody TO jan@localhost;

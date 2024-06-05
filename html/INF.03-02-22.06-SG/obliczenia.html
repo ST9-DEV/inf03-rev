@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="/styl2.css">
+    <script >
+        
+        function oblicz(){
+        const litry=document.getElementById('litry');
+        const rodzaj=document.getElementById('rodzaj');
+        const koszt='';
+        const wynik=document.getElementById('wynik');
+        const war_rodzaj=parseInt(rodzaj.value);
+        const war_litry=parseInt(litry.value);
+        console.log(war_rodzaj);
+        console.log(war_litry*war_rodzaj);
+        if (war_rodzaj==1){
+            const koszt=4*war_litry;
+            wynik.innerHTML = 'koszt paliwa: '+koszt+' zł'
+        } 
+        else if(war_rodzaj==2){
+            const koszt=3.5*war_litry;
+            wynik.innerHTML = 'koszt paliwa: '+koszt+' zł'
+        }
+        else{
+            const koszt=0;
+            wynik.innerHTML = 'koszt paliwa: '+koszt+' zł'
+        };
+        ;};
+
+        
+    </script>
+</head>
+<body>
+    <div class="baner">
+        <h1>
+            Całodobowa stacja paliw
+        </h1>
+    </div>
+    <div class="menu">
+        <a href="/stacja.html"><img src="/home.png" ></a>
+        <a href="/obliczenia.html"><img src="znak.png"></a>
+        <a href="/kwerendy.txt" download>Pobierz dokumenty</a>
+    </div>
+    <div class="lewy"><h2>Orientacyjny koszt paliwa</h2>
+    <form action="" onsubmit="return false" >
+        <label>Rodzaj paliwa (1-benzyna, 2-olej napędowy):<br><input id="rodzaj" type="number"></label><br>
+        <label>Ile litrów?<br><input id="litry" type="number"></label><br>
+        <label><input type="submit" value="OBLICZ" onclick="oblicz()"></label>
+        <br><p id="wynik"></p>
+    </form>
+    </div>
+    <div class="prawy"><img class="sam" src="/samochod.png" alt="samochód"></div>
+    <footer class="stopka"><p>Stronę opracował: 00000000000</p></footer>
+</body>
+</html>
